@@ -1,0 +1,12 @@
+Número de experimentos: 1000
+Número de experimentos com caminho encontrado: 922
+Número de experimentos sem caminho encontrado: 78
+Média do tamanho do menor caminho: 7.188720173535792
+Número de vezes que BFS encontrou caminho menor: 0
+Número de vezes que A* encontrou caminho menor: 0
+Número de vezes que os dois algoritmos encontraram caminho do mesmo tamanho: 922
+Número de vezes que BFS encontrou caminho em menos passos: 340
+Número de vezes que A* encontrou caminho em menos passos: 582
+Número de vezes que os dois algoritmos encontraram caminho em igual número de passos: 0
+Média de passos a menos que BFS encontrou caminho quando foi o mais rápido: 11178.014705882353
+Média de passos a menos que A* encontrou caminho quando foi o mais rápido: 25435.77147766323
