@@ -324,4 +324,4 @@ elif mode == 'plot-graph':
             net.add_edge(artist0, artist1)
 
     net.toggle_physics(True)
-    net.show('figures/graph.html')
+    net.show('graph.html')
