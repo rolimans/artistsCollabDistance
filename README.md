@@ -90,7 +90,9 @@ An experiment was run with 1000 random artists pairs, the results are shown belo
 ### Number of paths found:
 
 - A path was found 922 times.
+
 - A path was not found 78 times.
+
 - ![Number of paths found](./figures/pathFound.png)
 
 ### Shortest Path Length:
