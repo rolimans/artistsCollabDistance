@@ -96,3 +96,7 @@ An experiment was run with 1000 random artists pairs, the results are shown belo
 - ![Distribution of steps difference between the algorithms when the algorithm x was faster](./figures/stepDifference.png)
 
 ## Graph Plot:
+
+Graph Network Plot using a 5 thousand node sample (doesn't represent the full network much).
+
+https://user-images.githubusercontent.com/33560560/197028568-bb383eda-7775-4a89-9d39-cf0b9d2f3b0f.mp4
