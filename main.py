@@ -69,8 +69,8 @@ def getDegreeDistribution(nodes):
 
     return {dg: degrees[dg] for dg in dgs}
 
-# Given a map of nodes and a number x, runs x experiments finding the shortest path between two random nodes using BFS and A* and returns a map with the key being a node id and value being a map with keys being the other node id and value being a dictionary with the experiment results
-# Each experiment result contains the shortest path length between the two nodes, the shortest path length found by BFS and A* and the steps taken to find the shortest path by BFS and A*
+# Given a map of nodes and a number x, runs x experiments finding a path between two random nodes using BFS and A* and returns a map with the key being a node id and value being a map with keys being the other node id and value being a dictionary with the experiment results
+# Each experiment result contains the shortest path length between the two nodes, the path length found by BFS and A* and the steps taken to find a path by BFS and A*
 
 
 def runExperiments(nodes, x):
