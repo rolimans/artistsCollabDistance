@@ -53,6 +53,7 @@ The dataset used in this project consists of two CSV files, one containig ~156k 
 ## Degree Analysis:
 
 Degree of artists nodes distribution:
+
 ![Degree of artists nodes distribution](./figures/degreeDist.png)
 
 ![Zoomed Degree of artists nodes distribution](./figures/degreeDistZoomed.png)
@@ -70,6 +71,7 @@ An experiment was run with 1000 random artists pairs, the results are shown belo
 - Average Path Length:
   7.18
 - Path's Length Histogram:
+
   ![Path's Length Histogram](./figures/minPathSizeDist.png)
 
 ### Number of times each algorithm found the shortest path:
