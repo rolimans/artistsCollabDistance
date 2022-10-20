@@ -6,7 +6,9 @@ Número de vezes que BFS encontrou caminho menor: 0
 Número de vezes que A* encontrou caminho menor: 0
 Número de vezes que os dois algoritmos encontraram caminho do mesmo tamanho: 922
 Número de vezes que BFS encontrou caminho em menos passos: 340
+BFS encontrou o caminho em menos passos 36.8763557483731% das vezes.
 Número de vezes que A* encontrou caminho em menos passos: 582
+A* encontrou o caminho em menos passos 63.1236442516269% das vezes.
 Número de vezes que os dois algoritmos encontraram caminho em igual número de passos: 0
 Média de passos a menos que BFS encontrou caminho quando foi o mais rápido: 11178.014705882353
 Média de passos a menos que A* encontrou caminho quando foi o mais rápido: 25435.77147766323

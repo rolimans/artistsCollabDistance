@@ -1,6 +1,7 @@
 from priorityQueue import PriorityQueue
 
 
+# Trace the path from the source to the target using the nodeInfo dictionary (representing the search tree) from the A* search
 def tracePath(artistSearchNodes, targetId):
     path = []
     current = targetId
@@ -8,6 +9,9 @@ def tracePath(artistSearchNodes, targetId):
         path.append(current)
         current = artistSearchNodes[current].parent
     return path
+
+# Calculate the heuristic value for a node
+# The heuristic value is the number of genres in common with the target node divided by the total number of genres plus the popularity of the node multiplied negatively by 1
 
 
 def artistProximityHeuristic(src, targetGenreMap):
@@ -18,6 +22,8 @@ def artistProximityHeuristic(src, targetGenreMap):
     sameGenres = 0 if len(
         targetGenreMap) == 0 else sameGenres / len(targetGenreMap)
     return sameGenres + src['popularity']
+
+# Class to represent a node in the A* search tree
 
 
 class SearchNode():
@@ -33,6 +39,8 @@ class SearchNode():
 
     def __lt__(self, other):
         return self.artistId < other.artistId
+
+# Run an A* search on the graph
 
 
 def aStarSearch(artistsNodes, sourceId, targetId):

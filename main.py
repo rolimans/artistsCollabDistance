@@ -35,6 +35,8 @@ def removeArtistDuplicates(artists):
     return list(artistsMap.values())
 
 
+# Map artists list and collabs list to a dictionary of nodes with the key being the artist id and the value being the artist object
+# The artist object contains the artist name, popularity, a list of genres and a list of collabs
 def artistsToNodes(artists, collabs):
     nodes = {}
     for artist in artists:
@@ -55,6 +57,7 @@ def artistsToNodes(artists, collabs):
     return {k: v for k, v in nodes.items() if len(v['collabs']) > 0}
 
 
+# Given a map of nodes, returns a map of degrees with the key being the degree and the value being the number of nodes with that degree
 def getDegreeDistribution(nodes):
     degrees = {}
     for node in nodes.values():
@@ -65,6 +68,9 @@ def getDegreeDistribution(nodes):
     dgs = sorted(degrees.keys())
 
     return {dg: degrees[dg] for dg in dgs}
+
+# Given a map of nodes and a number x, runs x experiments finding the shortest path between two random nodes using BFS and A* and returns a map with the key being a node id and value being a map with keys being the other node id and value being a dictionary with the experiment results
+# Each experiment result contains the shortest path length between the two nodes, the shortest path length found by BFS and A* and the steps taken to find the shortest path by BFS and A*
 
 
 def runExperiments(nodes, x):
@@ -114,6 +120,9 @@ collabs = parseCsv('data/collabs.csv')
 artistsNodes = artistsToNodes(artists, collabs)
 nameIdMap = {v['name']: k for k, v in artistsNodes.items()}
 
+
+# If no arguments are passed, run a search between nodes entered by the user
+# Otherwise run other posible modes: analyze degree distribution, run experiments, plot results of experiments and plot the graph
 mode = 'search'
 
 try:
@@ -254,7 +263,11 @@ elif mode == 'plot-efficiency':
     print(
         f'Número de vezes que BFS encontrou caminho em menos passos: {len(bestInSteps["bfs"])}')
     print(
+        f'BFS encontrou o caminho em menos passos {(len(bestInSteps["bfs"])/foundMap["found"])*100}% das vezes.')
+    print(
         f'Número de vezes que A* encontrou caminho em menos passos: {len(bestInSteps["aStar"])}')
+    print(
+        f'A* encontrou o caminho em menos passos {(len(bestInSteps["aStar"])/foundMap["found"])*100}% das vezes.')
     print(
         f'Número de vezes que os dois algoritmos encontraram caminho em igual número de passos: {bestInSteps["equal"]}')
     print(

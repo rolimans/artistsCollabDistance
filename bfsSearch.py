@@ -1,5 +1,7 @@
 from collections import deque
 
+# Trace the path from the source to the target using the visited dictionary from the BFS search
+
 
 def tracePath(visited, targetId):
     path = []
@@ -8,6 +10,8 @@ def tracePath(visited, targetId):
         path.append(current)
         current = visited[current]['parent']
     return path
+
+# Run a breadth-first search on the graph
 
 
 def bfsSearch(artistsNodes, sourceId, targetId):

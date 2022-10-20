@@ -1,5 +1,7 @@
 import heapq
 
+# Wrapper class for a priority queue implemented using heapq
+
 
 class PriorityQueue:
     def __init__(self):
